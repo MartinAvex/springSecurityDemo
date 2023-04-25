@@ -1,4 +1,4 @@
-package com.xavier.security.config;
+package com.xavier.security.handler;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;

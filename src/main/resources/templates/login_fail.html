@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>登录失败</title>
-    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../../static/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" th:href="@{/css/font-awesome.min.css}" href="../../static/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" th:href="@{/css/login.css}" href="../../static/css/login.css">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/font-awesome.min.css}" href="../static/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/login.css}" href="../static/css/login.css">
 </head>
 <body>
 <div class="container">
     <main role="main">
         <div class="jumbotron">
-            <div class="col-sm-12 mx-auto text-center" th:with="exp=${#request.session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION')}">
-                <p th:if="${exp}" th:text="${exp.message}" class="text-danger font-size-x-small">1122</p>
-                <p>登录失败，请<a href="login.html" th:href="@{/templates/login}">重新登录</a>。</p>
+            <div class="col-sm-12 mx-auto text-center">
+                <p th:if="${errorMessage}" th:text="${errorMessage}" class="text-danger font-size-x-small">登录失败</p>
+                <p>登录失败，请<a href="login.html" th:href="@{/login}">重新登录</a>。</p>
             </div>
         </div>
     </main>
@@ -24,6 +24,6 @@
     </footer>
 </div>
 </body>
-<script type="text/javascript" th:src="@{/js/jquery-2.1.4.min.js}" src="../../static/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" src="../../static/js/bootstrap.min.js"></script>
+<script type="text/javascript" th:src="@{/js/jquery-2.1.4.min.js}" src="../static/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
 </html>
